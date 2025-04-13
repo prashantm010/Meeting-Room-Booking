@@ -1,0 +1,41 @@
+Acko Office, seeks to implement a scheduling system to efficiently manage meeting room bookings. It currently have 4 meeting rooms with varying capacities:
+
+FerozShahKotla: 4-person capacity
+EdenGarden: 10-person capacity
+Lords: 20-person capacity
+Wimbledon: 2-person capacity
+Rules:
+
+Bookings can only be made within a single day without overlapping across days.
+Booking intervals are restricted to 30-minute increments (e.g., XX:00, XX:30).
+Meeting rooms are allocated on a FCFS basis.
+The system allocates the most optimal room based on capacity.
+If the desired capacity room is unavailable, the next available capacity room is allocated.
+No meetings can be scheduled during maintenance time. It happens at fixed times from 09:00 - 09:30, 13:00 - 13:30 and 18:30 - 19:00. During this time, no meeting rooms will be available to book.
+Bookings must be made for 2 to 20 people.
+Time input should follow the HH:MM format. Incorrect inputs will be rejected
+If the booking time overlaps with the buffer time or person capacity outside range NO_ROOM_AVAILABLE should be printed else ROOM_NAME.
+Input Constraints:
+
+1. Time will be in HH:MM (24 hours) format Time input should always consider the 30 minute time interval (start time and end time can only be 00, 30 and so on)
+3. For all the time inputs end_time > start_time
+Input:
+BOOK_ROOM <start_time(inclusive)> <end_time(exclusive)> <person_capacity>
+VIEW_ROOMS <start_time(inclusive)> <end_time(exclusive)>
+Output: 
+ROOM_NAME_1
+ROOM_NAME_1 ROOM_NAME_2
+
+
+
+
+
+
+
+Design Considerations
+Ability to add meeting rooms
+Ability to add guests within limit after schedule
+Send notification to guests (only logging)
+Map meeting room schedule to calendar for the day (only view for the day)
+
+
